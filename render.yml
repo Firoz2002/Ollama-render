@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ollama-server
+    env: docker
+    plan: free
+    autoDeploy: true
+    region: oregon
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: "11434"
